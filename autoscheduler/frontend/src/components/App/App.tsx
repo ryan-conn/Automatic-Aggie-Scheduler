@@ -14,9 +14,9 @@ import * as styles from './App.css';
 import fetchSavedSchedule from './testMeetings';
 import { replaceMeetings } from '../../redux/actions';
 import NavBar from '../NavBar';
-import HelpText from '../HelpText';
-import SelectTerm from '../SelectTerm';
-import LandingPage from '../LandingPage';
+import HelpText from '../LandingPage/HelpText';
+import SelectTerm from '../LandingPage/SelectTerm';
+import LandingPage from '../LandingPage/LandingPage';
 
 const App: React.SFC = function App() {
   // connect to Redux store
@@ -33,8 +33,6 @@ const App: React.SFC = function App() {
     <div className={styles.appContainer}>
       <ThemeProvider theme={theme}>
         <NavBar />
-        <HelpText />
-        <SelectTerm />
         <Router>
           {/* One component for each page/route goes in here */}
           <LandingPage path="/" />
